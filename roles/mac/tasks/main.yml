@@ -13,3 +13,8 @@
   import_tasks: npm.yml
   tags:
   - npm
+
+- name: install rust packages
+  import_tasks: rust.yml
+  tags:
+  - rust

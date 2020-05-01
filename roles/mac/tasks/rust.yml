@@ -1,0 +1,5 @@
+- name: rustup update
+  command: rustup update stable
+
+- name: install ripgrep
+  command: cargo install ripgrep

@@ -1,0 +1,58 @@
+- name: Update homebrew
+  homebrew:
+    name:
+    - ack
+    - bazel
+    - cmake
+    - fish
+    - git
+    - go
+    - graphviz
+    - hledger
+    - hping
+    - htop
+    - lsof
+    - jq
+    - mercurial
+    - mtr
+    - ncdu
+    - nmap
+    - node
+    - pstree
+    - rclone
+    - sloccount
+    - sqlite
+    - tcping
+    - tig
+    - tmux
+    - tree
+    - watch
+    - wget
+    state: latest
+    update_homebrew: true
+    upgrade_all: true
+    
+- name: Install homebrew cask packages
+  homebrew_cask:
+    name: '{{ item }}'
+    state: installed
+    # Some of these apps were installed outside cask. Don't error for these.
+    accept_external_apps: true
+  loop:
+    - disk-inventory-x
+    - dash
+    - docker
+    - firefox
+    - iterm2
+    # - java
+    - vlc
+    - gimp
+    - steam
+    - transmission
+  
+- name: Update homebrew casks
+  homebrew_cask:
+    upgrade_all: true
+
+- name: homebrew cleanup
+  command: brew cleanup

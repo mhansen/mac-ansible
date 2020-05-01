@@ -19,6 +19,7 @@
     - mtr
     - ncdu
     - nmap
+    - node
     - pstree
     - rclone
     - sloccount
@@ -59,26 +60,11 @@
   command: brew cleanup
 
 - name: install pip packages
-  pip:
-    name:
-    - ansible
-    - beancount
-    - deepdiff
-    - fava
-    - Flask
-    - ipython
-    - jupyter
-    - matplotlib
-    - mercurial
-    - numpy
-    - oauth2
-    - pandas
-    - pip
-    - pms5003
-    - prometheus-client
-    - pytest
-    - pyyaml
-    - requests
-    - sense-hat
-    - simplejson
-    - wheel
+  import_tasks: pip.yml
+  tags:
+  - pip
+
+- name: install npm packages
+  import_tasks: npm.yml
+  tags:
+  - npm

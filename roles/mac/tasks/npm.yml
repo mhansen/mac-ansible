@@ -1,0 +1,8 @@
+- name: update npm
+  npm:
+    name: '{{ item }}'
+    global: true
+    state: latest
+  loop:
+    - npm
+    - typescript

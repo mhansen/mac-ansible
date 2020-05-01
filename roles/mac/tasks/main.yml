@@ -1,0 +1,61 @@
+- name: Update homebrew
+  homebrew:
+    name:
+    - ack
+    - fish
+    - git
+    - hledger
+    - hping
+    - htop
+    - jq
+    - mercurial
+    - mtr
+    - nmap
+    - pstree
+    - rclone
+    - tcping
+    - tig
+    - tmux
+    - wget
+    state: latest
+    update_homebrew: true
+    upgrade_all: true
+    
+- name: Install homebrew cask packages
+  homebrew_cask:
+    name: '{{ item }}'
+    state: installed
+  loop:
+    - vlc
+    - gimp
+    - transmission
+  
+- name: Update homebrew casks
+  homebrew_cask:
+    upgrade_all: true
+
+- name: homebrew cleanup
+  command: brew cleanup
+
+- name: install pip packages
+  pip:
+    name:
+    - ansible
+    - beancount
+    - deepdiff
+    - fava
+    - Flask
+    - ipython
+    - jupyter
+    - matplotlib
+    - mercurial
+    - numpy
+    - oauth2
+    - pandas
+    - pip
+    - pms5003
+    - prometheus-client
+    - pytest
+    - requests
+    - sense-hat
+    - simplejson

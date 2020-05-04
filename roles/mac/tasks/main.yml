@@ -1,4 +1,9 @@
 # Cribbed from https://github.com/adamchainz/mac-ansible/blob/master/roles/adam_mac/tasks/installs.yml
+- name: update vimfiles
+  import_tasks: vimfiles.yml
+  tags:
+  - vimfiles
+
 - name: install brew packages
   import_tasks: brew.yml
   tags:

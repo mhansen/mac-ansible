@@ -1,0 +1,12 @@
+- name: update vimfiles to latest
+  git:
+    repo: git@github.com:mhansen/vimfiles.git
+    dest: ~/.vim
+    update: yes
+
+- name: symlink tmux conf
+  file:
+    dest: ~/.tmux.conf
+    src: ~/.vim/tmux.conf
+    state: link
+  

@@ -2,3 +2,9 @@
   user:
     name: mark
     shell: /usr/local/bin/fish
+
+- name: update fishfiles to latest
+  git:
+    repo: git@github.com:mhansen/fishfiles.git
+    dest: ~/.config/fish
+    update: yes

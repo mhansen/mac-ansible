@@ -9,7 +9,6 @@
     - ipython
     - jupyter
     - matplotlib
-    - mercurial
     - numpy
     - oauth2
     - pandas

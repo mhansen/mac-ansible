@@ -1,3 +1,12 @@
+- name: ensure github ssh key is listed in known_hosts
+  lineinfile:
+    dest: ~/.ssh/known_hosts
+    create: true
+    mode: 0644
+    state: present
+    line: "{{ lookup('file', 'github_ssh_host_key') }}"
+    regexp: "^github\\.com"
+
 - name: update vimfiles to latest
   git:
     repo: git@github.com:mhansen/vimfiles.git

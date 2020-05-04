@@ -9,6 +9,11 @@
   tags:
   - brew
 
+- name: set fish as default shell
+  import_tasks: fish.yml
+  tags:
+  - fish
+
 - name: install pip packages
   import_tasks: pip.yml
   tags:

@@ -1,0 +1,4 @@
+- name: set default shell to fish
+  user:
+    name: mark
+    shell: /usr/local/bin/fish

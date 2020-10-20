@@ -1,4 +1,9 @@
 # Cribbed from https://github.com/adamchainz/mac-ansible/blob/master/roles/adam_mac/tasks/installs.yml
+- name: setup home/end
+  import_tasks: home.yml
+  tags:
+  - home
+
 - name: update vimfiles
   import_tasks: vimfiles.yml
   tags:

@@ -1,0 +1,11 @@
+- name: create keybindings dir
+  file:
+    path: ~/Library/KeyBindings/
+    state: directory
+    mode: '0755'
+
+- name: map home/end on keyboards
+  copy:
+    dest: ~/Library/KeyBindings/DefaultKeyBinding.dict
+    src: DefaultKeyBinding.dict
+    mode: '0644'

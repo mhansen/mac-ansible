@@ -4,13 +4,16 @@
     - ack
     - bazel
     - cmake
+    - fd
     - fish
+    - fswatch
     - git
     - go
     - graphviz
     - hledger
     - hping
     - htop
+    - hugo
     - lsof
     - jq
     - mercurial
@@ -20,12 +23,14 @@
     - node
     - pstree
     - rclone
+    - ruby
     - sloccount
     - sqlite
     - tcping
     - tig
     - tmux
     - tree
+    - vnu
     - watch
     - wget
     state: latest
@@ -45,6 +50,7 @@
     - firefox
     - iterm2
     # - java
+    - powershell
     - vlc
     - gimp
     - steam

@@ -1,0 +1,3 @@
+- vundle updates or vim-plug
+  https://github.com/MichaelAquilina/ubuntu-ansible/blob/master/roles/ubuntu/tasks/vim.yml
+  this person uses vim-plug instad of vundle. is it better?

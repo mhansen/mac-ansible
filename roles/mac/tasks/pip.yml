@@ -7,8 +7,10 @@
     - fava
     - Flask
     - ipython
+    - jinja2
     - jupyter
     - matplotlib
+    - mypy
     - numpy
     - oauth2
     - pandas
